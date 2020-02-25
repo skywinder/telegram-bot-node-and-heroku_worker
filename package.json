@@ -13,5 +13,8 @@
     "express": "^4.16.1",
     "node-telegram-bot-api": "^0.28.0",
     "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
