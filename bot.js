@@ -7,8 +7,9 @@ bot.on('message', (msg) => {
     l(msg);
     const chatId = msg.chat.id;
     var d = new Date().toLocaleTimeString();
-    l("WEB: " + d);
-    bot.sendMessage(chatId, d);
+    let obj = "WEB: " + d;
+    l(obj);
+    bot.sendMessage(chatId, obj);
 });
 
 function l(obj) {
