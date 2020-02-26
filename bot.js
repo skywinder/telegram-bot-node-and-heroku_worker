@@ -1,15 +1,15 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
-const token = process.env.TOKEN
-
+const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', (msg) => {
-    l(msg)
+    l(msg);
     const chatId = msg.chat.id;
-    // send a message to the chat acknowledging receipt of their message
-    var d = new Date();
-    bot.sendMessage(chatId, d.toLocaleTimeString())
+    var d = new Date().toLocaleTimeString();
+    let obj = "WEB: " + d;
+    l(obj);
+    bot.sendMessage(chatId, obj);
 });
 
 function l(obj) {
