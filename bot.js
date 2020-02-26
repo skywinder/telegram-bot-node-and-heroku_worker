@@ -6,9 +6,8 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on('message', (msg) => {
     l(msg);
     const chatId = msg.chat.id;
-    // send a message to the chat acknowledging receipt of their message
     var d = new Date().toLocaleTimeString();
-    l(d);
+    l("WEB: " + d);
     bot.sendMessage(chatId, d);
 });
 
