@@ -1,3 +1,5 @@
+const { l, s } = require("./utils");
+
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const token = process.env.TOKEN;
@@ -21,12 +23,3 @@ bot.on('message', (msg) => {
     })
 
 });
-
-function l(obj) {
-    obj = JSON.stringify(obj, null, 4); // (Optional) beautiful indented output.
-    console.log(obj); // Logs output to dev tools console.
-}
-
-function s(obj) {
-    return JSON.stringify(obj, null, 4); // (Optional) beautiful indented output
-}
