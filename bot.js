@@ -11,7 +11,8 @@ init_msg(SKY_ID);
 
 function init_msg(chatId) {
     let date = new Date().toLocaleTimeString();
-    let str = web + ": " + date + '\nChatId: ' + chatId.toString();
+    let str = `${web}: ${date}\nChatId: ${chatId.toString()}`;
+
     bot.sendMessage(chatId, str)
 }
 
@@ -19,7 +20,7 @@ bot.on('message', (msg) => {
     l(msg);
     const chatId = msg.chat.id;
     let date = new Date().toLocaleTimeString();
-    let str = web + ": " + date + `\n ChatId: ` + chatId.toString();
+    let str = `${web}: ${date}\n ChatId: ${chatId.toString()}`;
     l(str);
     bot.sendMessage(chatId, str).then(r => {
         bot.sendMessage(chatId, s([str, r.message_id, r.from.id, r.chat.id]));
@@ -27,9 +28,9 @@ bot.on('message', (msg) => {
         console.warn(err.message);
     })
 
-    // bot.getMe().then(sucess =>
+    // bot.getMe().then(success =>
     // {
-    //     bot.sendMessage(chatId, s(sucess));
+    //     bot.sendMessage(chatId, s(success));
     // })
 
 });
