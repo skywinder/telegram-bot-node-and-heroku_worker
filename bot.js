@@ -28,9 +28,4 @@ bot.on('message', (msg) => {
         console.warn(err.message);
     })
 
-    // bot.getMe().then(success =>
-    // {
-    //     bot.sendMessage(chatId, s(success));
-    // })
-
 });
