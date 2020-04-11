@@ -28,4 +28,4 @@ bot.on('message', (msg) => {
         console.warn(err.message);
     })
 
-});
+})
